@@ -17,7 +17,7 @@ module.exports = {
     extend: {
       fontWeight: ['hover', 'focus'],
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Lora', ...defaultTheme.fontFamily.sans],
       },
     },
   },
