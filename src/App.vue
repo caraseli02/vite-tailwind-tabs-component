@@ -1,14 +1,12 @@
 <template>
-  <div>
+  <div class="px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto">
     <navBar />
-    <div class="max-w-screen-xl mx-auto py-6 sm:px-6 lg:px-8">
+    <div class="max-w-screen-xl mx-auto">
       <router-view v-slot="{ Component }">
-      <transition
-        name="slide-left"
-      >
-        <component :is="Component" />
-      </transition>
-    </router-view>
+        <transition name="slide-left">
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </div>
   </div>
 </template>
