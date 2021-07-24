@@ -4,7 +4,7 @@
     <div class="max-w-screen-xl mx-auto py-6 sm:px-6 lg:px-8">
       <router-view v-slot="{ Component }">
       <transition
-        name="slide-right"
+        name="slide-left"
       >
         <component :is="Component" />
       </transition>
@@ -33,17 +33,18 @@ html {
   width: 100%;
   height: 100%;
 }
-.slide-right-enter-active {
-  transition: all 0.5s ease-out;
+.slide-left-enter-active {
+  transition: all 0.5s ease-out, 1.3s;
+  animation-delay: 2.5s;
 }
 
-.slide-right-leave-active {
+.slide-left-leave-active {
   transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
 }
 
-.slide-right-enter-from,
-.slide-right-leave-to {
-  transform: translateX(-20px);
+.slide-left-enter-from,
+.slide-left-leave-to {
+  transform: translateY(20%);
   opacity: 0;
 }
 </style>

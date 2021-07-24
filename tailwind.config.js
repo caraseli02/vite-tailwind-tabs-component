@@ -14,6 +14,10 @@ module.exports = {
     ],
   },
   theme: {
+    backdropFilter: {
+      'none': 'none',
+      'blur': 'blur(20px)',
+    },
     extend: {
       fontWeight: ['hover', 'focus'],
       fontFamily: {
@@ -21,4 +25,7 @@ module.exports = {
       },
     },
   },
+  plugins: [
+    require('tailwindcss-filters'),
+  ],
 }
