@@ -16,12 +16,31 @@ module.exports = {
   theme: {
     backdropFilter: {
       'none': 'none',
-      'blur': 'blur(20px)',
+      'blur': 'blur(10px)',
     },
     extend: {
       fontWeight: ['hover', 'focus'],
       fontFamily: {
         sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+      },
+      animation: {
+        blob: "blob 10s infinite",
+      },
+      keyframes: {
+        blob: {
+          "0%": {
+            transform: "translate(0px, 0px) scale(1)",
+          },
+          "33%": {
+            transform: "translate(20px, -30px) scale(1.1)",
+          },
+          "66%": {
+            transform: "translate(-15px, 15px) scale(0.9)",
+          },
+          "100%": {
+            transform: "translate(0px, 0px) scale(1)",
+          },
+        },
       },
     },
   },

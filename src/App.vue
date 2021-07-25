@@ -23,17 +23,21 @@ export default defineComponent({
 </script>
 
 <style>
-html {
+@import "./assets/icons.css";
+
+#app {
+  background: green;
   background-image: url("../public/img/vuebg.jpg");
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+  padding-bottom: 50px;
+  min-height: 100vh;
 }
+
 .slide-left-enter-active {
   transition: all 0.5s ease-out, 1.3s;
-  animation-delay: 2.5s;
 }
 
 .slide-left-leave-active {
@@ -44,5 +48,6 @@ html {
 .slide-left-leave-to {
   transform: translateY(20%);
   opacity: 0;
+  position: absolute;
 }
 </style>

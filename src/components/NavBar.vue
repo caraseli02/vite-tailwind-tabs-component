@@ -26,7 +26,7 @@ export default defineComponent({
       mx-auto
     "
   >
-    <router-link to="/"><h1 class="text-lg">Tabs Component</h1></router-link>
+    <router-link to="/"><h1 class="text-gray-900 font-bold text-xl">Tabs Component</h1></router-link>
     <Tabs :tabs="links">
       <!--Using Scoped Slots to transform tab in <router-link/> and make it UpperCase.
          -->
@@ -34,8 +34,8 @@ export default defineComponent({
         <router-link
           :class="[
             $route.name === slotProps.tab
-              ? 'text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700'
-              : 'text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700'
+              ? 'text-black bg-purple-200 focus:outline-none focus:text-purple-100 focus:bg-gray-700'
+              : 'text-gray-900 hover:text-black hover:bg-purple-300 focus:outline-none focus:text-black focus:bg-purple-400 '
           ]"
           :to="{ name: slotProps.tab }"
           class="p-2 rounded-lg"
